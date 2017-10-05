@@ -239,7 +239,7 @@ function drawRandom() {
                 var angle = frame*0.001-millis() * 0.005;
                 ellipse(rec[i].x + 15 * cos(angle), rec[i].y + 15 * sin(angle), 6, 6);
 
-
+                strokeWeight(weight);
 
                 break;
         }
