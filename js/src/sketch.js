@@ -225,7 +225,7 @@ function drawRandom() {
                 else
                     stroke(255, 98, 255);
 
-                ellipse(rec[i].x, rec[i].y, 30, 30);
+                ellipse(rec[i].x, rec[i].y, 24, 24);
 
                 noStroke();
                 if (rec[i].color === 0)
@@ -237,7 +237,7 @@ function drawRandom() {
 
 
                 var angle = frame*0.001-millis() * 0.005;
-                ellipse(rec[i].x + 15 * cos(angle), rec[i].y + 15 * sin(angle), 6, 6);
+                ellipse(rec[i].x + 12 * cos(angle), rec[i].y + 12 * sin(angle), 6, 6);
 
                 strokeWeight(weight);
 
