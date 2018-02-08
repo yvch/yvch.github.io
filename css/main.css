@@ -394,6 +394,7 @@ nav a:hover {
 	.work1 .work-desc {
 		animation-play-state: running !important;
 		margin-right: 0;
+		z-index: 100;
 	}
 
 	.work2 .work-desc {
@@ -401,11 +402,13 @@ nav a:hover {
 		float: right;
 		margin-right: 0;
 		margin-top: 200px;
+		z-index: 100;
 	}
 
 	.work3 .work-desc {
 		animation-play-state: running !important;
 		margin-right: 0;
+		z-index: 100;
 	}
 
 	.work1 img, .work2 img, .work3 img {
