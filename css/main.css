@@ -392,17 +392,32 @@ nav a:hover {
 
 @media screen and (max-width: 600px) {
 	.work1 .work-desc {
+		animation-play-state: running !important;
 		margin-right: 0;
 	}
 
 	.work2 .work-desc {
+		animation-play-state: running !important;
 		float: right;
 		margin-right: 0;
 		margin-top: 200px;
 	}
 
 	.work3 .work-desc {
+		animation-play-state: running !important;
 		margin-right: 0;
+	}
+
+	.work1 img, .work2 img, .work3 img {
+		animation-play-state: running !important;
+	}
+
+	.work1 img {
+		left: 32%;
+	}
+
+	.work2 img {
+		left: 50%;
 	}
 
 	.work-more .work-desc {
