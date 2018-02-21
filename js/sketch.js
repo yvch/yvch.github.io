@@ -78,13 +78,13 @@ function drawDot() {
     noStroke();
 
     fill(232, 97, 29, 55);
-    rect(windowWidth/2-6-x, windowHeight*7/8-y, 16, 16);
+    rect(windowWidth/2-x, windowHeight*6/8-y, 16, 16);
 
     fill(232, 97, 29, 100);
-    rect(windowWidth/2-6+x, windowHeight*7/8+y, 16, 16);
+    rect(windowWidth/2+x, windowHeight*6/8+y, 16, 16);
 
     fill(232, 97, 29, 150);
-    rect(windowWidth/2-6+y, windowHeight*7/8-x, 16, 16);
+    rect(windowWidth/2+y, windowHeight*6/8-x, 16, 16);
 
     fill(232, 97, 29, 48);
 }

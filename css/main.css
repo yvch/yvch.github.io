@@ -35,7 +35,7 @@ html, body {
 	top: 0;
 	bottom: 0;
 	background: url(/images/website-name-bg.png) no-repeat center center;
-	background-size: 60% auto;
+	background-size: 64% auto;
 	text-align: center;
 	vertical-align: middle;
 
@@ -43,7 +43,7 @@ html, body {
 
 .website-desc {
 	position: relative;
-    top: 45%;
+    top: 42%;
     transform: translateY(-50%);
     color: #494949;
     font-size: 60px;
@@ -51,7 +51,7 @@ html, body {
 
 .website-menu {
 	position: relative;
-    top: 36%;
+    top: 32%;
 }
 
 .website-menu ul {
@@ -65,7 +65,7 @@ html, body {
 }
 
 .website-menu a {
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 2px;
     color: #666;
     font-size: 14px;
@@ -84,7 +84,7 @@ html, body {
 
 .recent-tip {
 	position: absolute;
-	bottom: 4%;
+	bottom: 12%;
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 0;
@@ -105,7 +105,7 @@ html, body {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 8px solid #666666;
-    margin: -8px auto 0 auto;
+    margin: 8px auto 0 auto;
 }
 
 .showHeader {
@@ -375,7 +375,17 @@ nav a:hover {
 
 .animation-run {
 	animation-play-state: running !important;
-} 
+}
+
+#about {
+	text-align: center;
+	margin-top: 12%;
+	font-size: 14px;
+}
+
+#about h4{
+	margin-top: 60px;
+}
 
 @media screen and (max-width: 500px) {
 	.main-title {
