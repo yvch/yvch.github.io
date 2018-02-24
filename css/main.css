@@ -138,6 +138,8 @@ nav {
 	margin: 20px auto; 
 	width: 100%;
 	max-width: 1170px;
+	height: 32px;
+	overflow: hidden;
 }
 
 nav ul { 
@@ -158,16 +160,19 @@ nav li {
 nav a { 
 	padding: 3px 12px; 
 	text-decoration: none; 
-	color: #ddd; 
-	line-height: 100%; 
+	color: #ddd;
 	overflow: hidden;
 	font-size: 12px;
 } 
 
+.special nav a {
+	vertical-align: 20%;
+}
+
 .current-tab {
 	color: #494949;
 }
-
+ !important
 nav a:hover {
 	/*color: #FFF;*/
 	color: #E8611D;

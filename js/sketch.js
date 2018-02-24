@@ -10,7 +10,7 @@ function setup() {
     }
 
     if (windowWidth < 375)
-        num = 144;
+        num = 96;
 
 }
 

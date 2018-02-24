@@ -54,7 +54,7 @@ var svg = d3.select("#notes").append("div")
 
 
 // 转换文件数据
-d3.json("notes.json", function(error, data) {
+d3.json("res/notes.json", function(error, data) {
   if (error) throw error;
   
   //对root数据进行矩形树布局

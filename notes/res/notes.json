@@ -233,7 +233,7 @@
 					"children":
 					[
 						{"name":"问题分析", "size":5},
-						{"name":"5 Why's", "size":2},
+						{"name":"5 Whys", "size":2},
 						{"name":"亲和图", "size":2},
 						{"name":"关联图法", "size":2},
 						{"name":"鱼骨图", "size":2},
