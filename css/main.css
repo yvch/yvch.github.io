@@ -410,6 +410,7 @@ nav a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
 	.work1 .work-desc {
 		animation-play-state: running !important;
 		margin-right: 0;
@@ -441,5 +442,19 @@ nav a:hover {
 
 	.work-more .work-desc {
 		background-size: 150% auto;
+	}
+
+	.work-more .work-desc a {
+		font-size: 12px;
+		line-height: 18px;
+		border: solid 1px;
+	}
+
+	.work-more .work-desc h4 {
+		font-size: 12px;
+	}
+
+	#about {
+		margin-top: 24%;
 	}
 }

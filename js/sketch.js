@@ -40,6 +40,8 @@ function draw() {
         }
     }
 
+    
+
 
 }
 
@@ -87,6 +89,12 @@ function drawDot() {
     rect(windowWidth/2+y, windowHeight*6/8-x, 16, 16);
 
     fill(232, 97, 29, 48);
+
+    stroke(48, 48, 48, 255);
+    strokeWeight(2);
+    line(windowWidth/2, windowHeight, windowWidth/2, windowHeight*7/8);
+    noStroke();
+    
 }
 
 function particle() {
