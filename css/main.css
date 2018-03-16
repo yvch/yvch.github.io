@@ -43,7 +43,7 @@ html, body {
 
 .website-desc {
 	position: relative;
-    top: 42%;
+    top: 36%;
     transform: translateY(-50%);
     color: #494949;
     font-size: 60px;
@@ -51,7 +51,7 @@ html, body {
 
 .website-menu {
 	position: relative;
-    top: 32%;
+    top: 24%;
 }
 
 .website-menu ul {
