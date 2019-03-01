@@ -1,16 +1,30 @@
 var rects = [];
-var num = 72;
+var num = 48;
+var width = 60;
+
+
 
 function setup() {
-    var canvas = createCanvas(windowWidth-5, windowHeight-5);
 
+    width = select("#dynamicBG").width;
+    if (width <= 60) {
+        width = 768;
+        num = 0.12 * width;
+    } else {
+        width -= 10;
+        num = 0.16 * width;
+        // console.log(num);
+    }
+        
+
+    var canvas = createCanvas(width, windowHeight);
     canvas.parent("dynamicBG");
+    
+    
+
     for(var i = 0; i < num; i++){
         rects[i] = new particle();
     }
-
-    if (windowWidth < 375)
-        num = 96;
 
 }
 
@@ -24,10 +38,10 @@ function draw() {
     for(var i = 0; i < num; i++){
         rects[i].update();
         for (var j = i+1; j < num; j++) {
-            if (dist(rects[i].pos.x, rects[i].pos.y, rects[j].pos.x, rects[j].pos.y) < num * 0.8) {
+            if (dist(rects[i].pos.x, rects[i].pos.y, rects[j].pos.x, rects[j].pos.y) < num * 0.6) {
                 for (var k = j+1; k < num; k++) {
-                    if (dist(rects[j].pos.x, rects[j].pos.y, rects[k].pos.x, rects[k].pos.y) < num * 0.8) {
-                        fill(48, 48, 48, 96);
+                    if (dist(rects[j].pos.x, rects[j].pos.y, rects[k].pos.x, rects[k].pos.y) < num * 0.6) {
+                        fill(48, 48, 48, 10);
                         beginShape(TRIANGLES);
                         vertex(rects[i].pos.x, rects[i].pos.y);
                         vertex(rects[j].pos.x, rects[j].pos.y);
@@ -41,19 +55,25 @@ function draw() {
     }
 
     
-
-
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth-10, windowHeight-10);
+    width = select("#dynamicBG").width;
+    if (width <= 60) {
+        width = 768;
+        num = 0.12 * width;
+    } else {
+        width -= 10;
+        num = 0.16 * width;
+        // console.log(num);
+    }
 
+    resizeCanvas(width-5, windowHeight-5);
+    
+    
     for(var i = 0; i < num; i++){
         rects[i] = new particle();
     }
-
-    if (windowWidth < 375)
-        num = windowWidth/16;
 }
 
 function drawDot() {
@@ -78,27 +98,11 @@ function drawDot() {
 
     rectMode(CENTER);
     noStroke();
-
-    fill(232, 97, 29, 55);
-    rect(windowWidth/2-x, windowHeight*6/8-y, 16, 16);
-
-    fill(232, 97, 29, 100);
-    rect(windowWidth/2+x, windowHeight*6/8+y, 16, 16);
-
-    fill(232, 97, 29, 150);
-    rect(windowWidth/2+y, windowHeight*6/8-x, 16, 16);
-
-    fill(232, 97, 29, 48);
-
-    stroke(48, 48, 48, 255);
-    strokeWeight(2);
-    line(windowWidth/2, windowHeight, windowWidth/2, windowHeight*7/8);
-    noStroke();
     
 }
 
 function particle() {
-    this.pos = createVector(random(0, windowWidth), random(0, windowHeight));
+    this.pos = createVector(random(0, width), random(0, windowHeight));
     
     var direction = createVector(1, 1);
     this.update = function() {
@@ -110,23 +114,23 @@ function particle() {
 
         this.pos.add(trans);
 
-        var a = random(50, 120);
-        var r = map(a, 50, 120, 4, 2);
+        var a = random(50, 80);
+        var r = map(a, 50, 80, 3, 1);
 
         rect(this.pos.x, this.pos.y, r, r);
         fill(232, 97, 29, a);
 
-        if (this.pos.x > windowWidth-10) {
+        if (this.pos.x > width-3) {
             fill(48, 48, 48, a);
             direction.x = -5;
         }
-        if (this.pos.x < 10)
+        if (this.pos.x < 3)
             direction.x = 1;
-        if (this.pos.y > windowHeight-10) {
+        if (this.pos.y > windowHeight-3) {
             fill(48, 48, 48, a);
             direction.y = -5;
         }
-        if (this.pos.y < 10)
+        if (this.pos.y < 3)
             direction.y = 1;
 
     }

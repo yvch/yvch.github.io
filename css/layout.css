@@ -1,0 +1,250 @@
+body::-webkit-scrollbar {width: 0}
+html::-webkit-scrollbar {width: 0}
+
+html {
+	box-sizing: border-box;
+	font-size: 8px;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+  
+*, *:before, *:after {
+	box-sizing: inherit;
+
+	overflow-x: hidden;
+	font-family: SimHei,"微软雅黑",sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+	nav {
+		width: 100%;
+		height: 100%;
+		max-height: 540px;
+	}
+
+	#dynamicBG {
+		width: 100%;
+		height: 100%;
+		max-height: 540px;
+
+		position: absolute;
+		z-index: 1;
+		background: #FEFCFA;
+	}
+
+	.logo {
+		width: 7rem;
+		height: 10rem;
+	
+		/* margin: 25% auto 1% 10%; */
+		position: absolute;
+		top: 50%;
+		left: 16%;
+		margin-top: -5rem;
+		
+	
+		background: url(/images/logo.png) no-repeat 0 center;
+		background-size: 100% auto;
+
+	}
+
+	#menu-outer {
+		width: 100%;
+		height: 100%;
+
+		position: relative;
+		z-index: 10;
+	}
+
+	#menu-inner {
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		margin-top: -6rem;
+
+		text-align: center;
+	}
+
+	#menu-inner a {
+		display: block;
+		font-size: 3rem;
+		line-height: 2;
+
+		text-decoration: none;
+		color: #696969;
+		font-weight: bold;
+
+		position: relative;
+
+	}
+	
+	nav footer {
+		display: none;
+	}
+
+	#content-outer {
+		width: 100%;
+		max-width: 1140px;
+		position: absolute;
+		left: 0;
+		margin-top: 4rem;
+	}
+
+}
+
+@media screen and (min-width: 769px) {
+	nav {
+		width: 25%;
+		height: 100%;
+		min-height: 375px;
+	
+		position: fixed;
+		left: 0;
+	}
+
+	#dynamicBG {
+		width: 25%;
+		max-width: 480px;
+	
+		position: fixed;
+		z-index: 1;
+		background: #FEFCFA;
+	}
+
+	.logo {
+		width: 25%;
+		height: 150px;
+	
+		margin: 3rem 0 3rem 2rem;
+		float: left;
+	
+		background: url(/images/logo.png) no-repeat 0 0;
+		background-size: 100% auto;
+	}
+
+	#menu-outer {
+		display: block;
+		position: relative;
+		height: 100%;
+		z-index: 10;
+	}
+
+	#menu-inner {	
+		float: left;
+		position: absolute;
+		left: 2rem;
+		top: 40%;
+	}
+	
+	nav footer {
+		font-size: 1rem;
+		color: #c9c9c9;
+	
+		float: left;
+		position: absolute;
+		left: 2rem;
+		bottom: 2rem;
+	}
+
+	#menu-inner a {
+		font-size: 3rem;
+		line-height: 1.5;
+
+		text-decoration: none;
+		color: #696969;
+		font-weight: bold;
+
+		position: relative;
+	
+		float: left;
+		clear: left;
+
+	}
+
+	#content-outer {
+		width: 75%;
+		max-width: 1140px;
+		position: absolute;
+		left: 24%;
+	}
+}
+
+@media screen and (min-width: 820px) {
+	.logo {
+		margin: 3rem 0 3rem 3rem;
+	}
+
+	#menu-inner {	
+		left: 3rem;
+	}
+	
+	nav footer {
+		font-size: 1.6rem;
+		
+		left: 3rem;
+		bottom: 3rem;
+	}
+
+}
+
+@media screen and (min-width: 960px) {
+	.logo {
+		margin: 3rem 0 3rem 4rem;
+	}
+
+	#menu-inner {	
+		left: 4rem;
+	}
+
+	#menu-inner a {
+		font-size: 3.5rem;
+	}
+	
+	nav footer {
+		font-size: 2rem;
+		
+		left: 4rem;
+		bottom: 3rem;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+
+	.logo {
+		width: 120px;
+		height: 180px;
+	}
+
+	nav footer {
+		font-size: 3rem;
+	}
+
+	#menu-inner a {
+		font-size: 5rem;
+	}
+}
+
+.active:after{
+	bottom: 55% !important;
+}
+
+#menu-inner a:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 16%;
+	right: 0;
+	bottom: 100%;
+	left: 0;
+	background-color: #F3A883;
+	width: 100%;
+	transition: bottom .1s ease;
+}
+
+#menu-inner a:hover:after{
+	bottom: 55%;
+	transition: bottom .3s ease;
+}

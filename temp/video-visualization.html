@@ -1,0 +1,119 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="applicable-device" content="pc,mobile">
+  
+  <title>视频数据可视化 [ 1F Lab ]</title>
+  
+    <!-- stylesheets list from _config.yml -->
+    
+      <link rel="stylesheet" href="/css/1flab.css">
+    
+  
+</head>
+<body>
+
+<nav>
+    <!-- 
+      <div id="dynamicBG"></div>
+     -->
+
+    <div id="dynamicBG"></div>
+
+    <div id="menu-outer">
+        <a class="logo" herf="http://1flab.com/"></a>
+        <div class="menu-btn"></div>
+        
+        <div id="menu-inner">
+            
+                
+                  <a href="/">PORTFOLIO</a>
+                
+            
+                
+                  <a href="/archives">BLOG</a>
+                
+            
+                
+                  <a href="/about">ABOUT</a>
+                
+            
+        </div>
+
+        <footer>© 1F Lab, 2019</footer>
+    </div>
+   
+</nav>
+
+<div id="content-outer">
+  <div id="content-inner">
+    <div>
+  <article id="page">
+    <h1>视频数据可视化</h1>
+    <p>我的本科毕业设计项目是新闻视频数据可视化，当时的我把数据可视化等价于信息图，这里还是先引用两句话来说明数据可视化吧。<br> <a id="more"></a></p>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><blockquote>
+<p>数据是纯粹的事实，信息是数据处理的结果，它揭示了数据的意义（RobP.、S.Morris与Coronel C. 2009）</p>
+</blockquote>
+<blockquote>
+<p>在计算机辅助下，用交互的、可视化的方式对抽象数据进行展示，以达到对数据认知的放大（Card S. &amp;Mackinly J.与Shneiderman B. 1999）</p>
+</blockquote>
+<p>随着信息的形式和载体日益丰富，人们通过数据可视化的方法，将海量数据处理映射成容易被理解接受的图形，从而提取总结信息，解释数据的意义。本文主要围绕新闻视频数据的可视化分析和呈现过程展开。</p>
+<hr>
+<h4 id="研究简介"><a href="#研究简介" class="headerlink" title="研究简介"></a>研究简介</h4><p>视频是新闻事件报道的重要形式，在“人人都是自媒体”的时代，新闻事件相关的视频产量剧增，其中不少视频信息是雷同或无意义的。<br>为了帮助人们更快地认知视频内容，更全面地分析新闻事件报道，本研究设计了根据检索词生成新闻事件时间轴的方法，展现新闻事件随事件发展的连续报道，以及同一时期对同一新闻事件来自不同媒体不同角度的报道。</p>
+<p>演示视频：</p>
+<ul>
+<li><a href="https://pan.baidu.com/s/1bR8MpASavGnbQl03ZOSt6g" target="_blank" rel="noopener">新闻视频可视化</a><br><img src="" alt="新闻事件搜索结果"></li>
+</ul>
+<hr>
+<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><ol>
+<li>新闻视频数据的分析<br>视频预处理</li>
+</ol>
+<ol start="2">
+<li>新闻视频数据的可视化</li>
+</ol>
+<p>当时我主要使用D3.js来完成数据可视化的前端工作，D3通过将数据和图形一一关联，直观地从图形上反馈数据的变化。</p>
+<hr>
+<h4 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h4>
+  </article>
+</div>
+
+<!-- <div id="paginator">
+  
+</div> -->
+
+
+    
+    
+  </div>
+</div>
+
+
+
+
+
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/1flab.js"></script>
+  
+
+
+
+<script src="/lib/p5.min.js"></script>
+<script src="/lib/p5.dom.min.js"></script>
+<script src="/js/sketch.js"></script>
+<script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".menu-btn").on("click", function() {
+        $("body").toggleClass("nav-display");
+    });
+  });
+</script>
+
+</body>
+</html>
