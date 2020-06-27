@@ -16,43 +16,47 @@
     
   
 </head>
-<body>
 
-<nav>
-    <!-- 
-      <div id="dynamicBG"></div>
-     -->
 
-    <div id="dynamicBG"></div>
+<body>    
+  <div id="container">
 
-    <div id="menu-outer">
-        <a class="logo" herf="http://1flab.com/"></a>
-        <div class="menu-btn"></div>
+    
+      <div class="lightTheme">
+            <nav id="header">
+      <div class="active menu-item">
+        <a href="/">1F Lab</a>
+      </div>
+      <div class="menu">
+              
         
-        <div id="menu-inner">
-            
-                
-                  <a href="/">PORTFOLIO</a>
-                
-            
-                
-                  <a href="/archives">BLOG</a>
-                
-            
-                
-                  <a href="/about" class="active">ABOUT<div></div></a>
-                
-            
-        </div>
-
-        <footer>© 1F Lab, 2019</footer>
+          <div class="menu-item ">
+            <a href="/">Home</a>
+          </div>
+        
+              
+        
+          <div class="menu-item ">
+            <a href="/archives">Blog</a>
+          </div>
+        
+              
+        
+          <div class="active menu-item">
+            <a href="/about">About</a>
+          </div>
+                  
+        
+      
     </div>
-   
-</nav>
+    </nav>
 
-<div id="content-outer">
-  <div id="content-inner">
-    <div>
+    <div id="content">
+      <link rel="stylesheet" type="text/css" href="/css/archive.css">
+<link rel="stylesheet" type="text/css" href="/css/article.css">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+
+<div>
   <article id="page">
     <h1></h1>
     <p><link rel="stylesheet" type="text/css" href="/css/layout.css"> </p>
@@ -64,7 +68,7 @@
 </ul>
 <h1 id="关于1F"><a href="#关于1F" class="headerlink" title="关于1F"></a>关于1F</h1><ul>
 <li>毕业院校：中山大学</li>
-<li>技能领域：交互/编程/视觉</li>
+<li>关注领域：用户体验设计/人机交互/数据可视化</li>
 <li>当前工作：华为终端UX设计师<br><br></li>
 </ul>
 <h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
@@ -74,15 +78,16 @@
   </article>
 </div>
 
-<!-- <div id="paginator">
-  
-</div> -->
+      
+    </div>
 
-
+    <footer>©2020, 1F Lab</footer>
+      </div>
     
     
   </div>
-</div>
+
+
 
 
 
@@ -95,17 +100,7 @@
 
 
 
-<script src="/lib/p5.min.js"></script>
-<script src="/lib/p5.dom.min.js"></script>
-<script src="/js/sketch.js"></script>
-<script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".menu-btn").on("click", function() {
-        $("body").toggleClass("nav-display");
-    });
-  });
-</script>
+
 
 </body>
 </html>

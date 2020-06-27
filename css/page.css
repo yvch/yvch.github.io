@@ -1,24 +1,25 @@
-sspai.css•Droplr™
+#post, #page {
+	padding: 12px 64px; 
+    margin: 12px 0px;
+}
 
 body {
-	font-size: 15px;
-  	color: #494949;
+	font-size: 16px;
+  	color: #1a1a1a;
   	background: #fff;
 	font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
-	margin: 0;
-	padding: 10%;
 }
 
 h1 {
 	font-size: 2.2em;
 	font-weight: 700;
-	line-height: 1.1;
+	line-height: 2.4;
 	padding-top: 16px;
 	margin-bottom: 4px;
 }
 
 h2, h3, h4, h5, h6 {
-	line-height: 1.5em;
+	line-height: 1.4em;
 	margin-top: 2.2em;
 	margin-bottom: 4px;
 }
@@ -27,7 +28,7 @@ h2 {
 	font-size: 1.4em;
 	margin: 40px 10px 20px 0;
 	padding-left: 9px;
-	border-left: 6px solid #F3A883;
+	border-left: 4px solid #3853CB;
 	font-weight: 700;
 	line-height: 1.4;
 }
@@ -82,15 +83,16 @@ p {
 	margin: 0 0 20px;
 	padding: 0;
 	line-height: 1.8;
+	font-size: 1em;
 }
 
 a {
-	color: #E8611D;
+	color: #3853CB;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #E8611D;
+	color: #3853CB;
 	text-decoration: underline;
 }
 a:focus {
@@ -164,7 +166,7 @@ pre {
   font-family: Courier, sans-serif;
 }
 code {
-  color: #E8611D;
+  color: #3853CB;
 	background-color: #FEFCFA;
 	border-radius: 4px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -173,7 +175,7 @@ code {
 }
 
 p > code {
-	color: #E8611D;
+	color: #3853CB;
 	background-color: #FEFCFA;
 	font-size: .95em;
   border-radius: 3px;
@@ -296,7 +298,11 @@ time {
 }
 
 .toc {
-	background: #FEFCFA;
+	background: #fafafa;
 	padding-top: 16px;
-	padding-bottom: 16px;
 }
+
+.toc-link {
+	color: #494949;
+}
+

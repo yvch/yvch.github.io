@@ -1,3 +1,136 @@
+body::-webkit-scrollbar {
+  width: 0;
+}
+html::-webkit-scrollbar {
+  width: 0;
+}
 body {
   margin: 0;
+  height: 100%;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  overflow-x: hidden;
+  font-family: SimHei, "微软雅黑", sans-serif;
+}
+#container .darkTheme {
+  background-color: #1a1a1a;
+}
+#container .lightTheme {
+  background-color: #fff;
+}
+#dynamicBG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-color: #000;
+  overflow-y: hidden;
+}
+#header,
+#content,
+footer {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.darkTheme #header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.darkTheme footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.darkTheme #header {
+  padding: 24px 0px 0px 0px;
+}
+.lightTheme #header {
+  padding: 24px 0px;
+  border-bottom: 1px #999 solid;
+}
+.menu-item {
+  padding: 6px 16px;
+  float: left;
+}
+.menu {
+  float: right;
+}
+.lightTheme .menu-item {
+  border: 1px #fff solid;
+}
+.darkTheme .menu-item a {
+  color: #aaa;
+  text-decoration: none !important;
+  font-size: 1rem;
+}
+.lightTheme .menu-item a {
+  color: #999;
+  text-decoration: none !important;
+  font-size: 1rem;
+}
+.darkTheme .menu-item a:hover,
+.darkTheme .active a {
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.lightTheme .menu-item a:hover,
+.lightTheme .active a {
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+footer {
+  margin-top: 24px;
+  padding: 24px 16px;
+  font-size: 1rem;
+  color: #a3a3a3;
+  text-align: right;
+}
+.lightTheme footer {
+  border-top: 1px solid #a3a3a3;
+}
+#floatLayer {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 160px);
+  top: 80px;
+  left: 0;
+}
+#floatLayer text:hover {
+  text-decoration: underline;
+  font-size: 48px;
+}
+.articleItem {
+  display: inline-block;
+  opacity: 50%;
+  border-radius: 24px;
+  padding: 12px;
+  filter: blur(4px);
+  transition: all 0.3s ease-in;
+}
+.articleItem:hover {
+  opacity: 100%;
+  font-size: 1.2rem;
+  display: inline-block;
+  border-radius: 4px;
+  filter: blur(0px);
+  transition: all 0.1s ease-in;
+}
+.articleItem:hover a {
+  display: inline !important;
+}
+.node:hover {
+  color: #fff;
 }

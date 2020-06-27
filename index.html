@@ -16,112 +16,64 @@
     
   
 </head>
-<body>
 
-<nav>
-    <!-- 
-      <div id="dynamicBG"></div>
-     -->
 
-    <div id="dynamicBG"></div>
+<body>    
+  <div id="container">
 
-    <div id="menu-outer">
-        <a class="logo" herf="http://1flab.com/"></a>
-        <div class="menu-btn"></div>
+    
+      <div class="darkTheme">
+            <nav id="header">
+      <div class="active menu-item">
+        <a href="/">1F Lab</a>
+      </div>
+      <div class="menu">
+              
         
-        <div id="menu-inner">
-            
-                
-                  <a href="/" class="active">PORTFOLIO<div></div></a>
-                
-            
-                
-                  <a href="/archives">BLOG</a>
-                
-            
-                
-                  <a href="/about">ABOUT</a>
-                
-            
-        </div>
-
-        <footer>© 1F Lab, 2019</footer>
+          <div class="active menu-item">
+            <a href="/">Home</a>
+          </div>
+                  
+        
+              
+        
+          <div class="menu-item ">
+            <a href="/archives">Blog</a>
+          </div>
+        
+              
+        
+          <div class="menu-item ">
+            <a href="/about">About</a>
+          </div>
+        
+      
     </div>
-   
-</nav>
+    </nav>
 
-<div id="content-outer">
-  <div id="content-inner">
-    <link rel="stylesheet" type="text/css" href="/css/layout.css">
-<link rel="stylesheet" type="text/css" href="/css/portfolio.css">
+    <div id="content">
+      <svg id="floatLayer"/>
+<div id="dynamicBG"></div>
 
-<div class="g-container">
-    <div class="row line">
-        <div class="grid-2 seperator">
-            <img>
-            <p>title</p>
-        </div>
 
-        <div class="grid-2">
-            <img>
-            <p>title</p>
-        </div>
+
+<script src="/lib/p5.min.js"></script>
+<script src="/lib/p5.dom.min.js"></script>
+<script src="/js/sketch.js"></script>
+
+<script src="/lib/d3.min.js"></script>
+<script src="/js/works.js"></script>
+
+      
     </div>
 
-    <div class="row line">
-        <div class="grid-1">
-            <img>
-            <p>title</p>
-        </div>
-    </div>
-
-    <div class="row line">
-        <div class="grid-2 seperator">
-            <img>
-            <p>title</p>
-        </div>
-
-        <div class="grid-2">
-            <img>
-            <p>title</p>
-        </div>
-    </div>
-
-    <div class="row line">
-        <div class="grid-3 seperator">
-            <img>
-            <p>title</p>
-        </div>
-
-        <div class="grid-3 seperator">
-            <img>
-            <p>title</p>
-        </div>
-
-        <div class="grid-3">
-            <img>
-            <p>title</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="grid-1">
-            <img>
-            <p>title</p>
-        </div>
-    </div>
-
-    <footer class="mobile-footer">© 1F Lab, 2019</footer>
-
-
-</div>
-
-
-
+    <footer>©2020, 1F Lab</footer>
+      </div>
     
     
   </div>
-</div>
+
+
 
 
 
@@ -134,17 +86,7 @@
 
 
 
-<script src="/lib/p5.min.js"></script>
-<script src="/lib/p5.dom.min.js"></script>
-<script src="/js/sketch.js"></script>
-<script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".menu-btn").on("click", function() {
-        $("body").toggleClass("nav-display");
-    });
-  });
-</script>
+
 
 </body>
 </html>

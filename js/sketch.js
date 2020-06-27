@@ -1,137 +1,88 @@
-var rects = [];
-var num = 48;
-var width = 60;
-
+var dots = [];
+var num = 2500;
+var R = 80;
+var center = [0, 0];
 
 
 function setup() {
 
-    width = select("#dynamicBG").width;
-    if (width <= 60) {
-        width = 768;
-        num = 0.12 * width;
-    } else {
-        width -= 10;
-        num = 0.16 * width;
-        // console.log(num);
-    }
-        
-
+    var width = select("#dynamicBG").width;
     var canvas = createCanvas(width, windowHeight);
     canvas.parent("dynamicBG");
     
-    
+    var min = width < windowHeight ? width : windowHeight;
+    R = min*1.414;
+    center = [width/2, height/2];
+    num = width*0.1;
 
     for(var i = 0; i < num; i++){
-        rects[i] = new particle();
+        dots[i] = new particle();
     }
-
 }
 
 function draw() {
 
     clear();
     smooth();
-
-    drawDot();
+    frameRate(12);
 
     for(var i = 0; i < num; i++){
-        rects[i].update();
-        for (var j = i+1; j < num; j++) {
-            if (dist(rects[i].pos.x, rects[i].pos.y, rects[j].pos.x, rects[j].pos.y) < num * 0.6) {
-                for (var k = j+1; k < num; k++) {
-                    if (dist(rects[j].pos.x, rects[j].pos.y, rects[k].pos.x, rects[k].pos.y) < num * 0.6) {
-                        fill(48, 48, 48, 10);
-                        beginShape(TRIANGLES);
-                        vertex(rects[i].pos.x, rects[i].pos.y);
-                        vertex(rects[j].pos.x, rects[j].pos.y);
-                        vertex(rects[k].pos.x, rects[k].pos.y);
-                        endShape();
-
-                    }
-                }
-            }
-        }
+        dots[i].update();
     }
 
     
 }
 
 function windowResized() {
-    width = select("#dynamicBG").width;
-    if (width <= 60) {
-        width = 768;
-        num = 0.12 * width;
-    } else {
-        width -= 10;
-        num = 0.16 * width;
-        // console.log(num);
-    }
+    var width = select("#dynamicBG").width;
+    var canvas = createCanvas(width, windowHeight);
+    canvas.parent("dynamicBG");
+    
+    var min = width < windowHeight ? width : windowHeight;
+    R = min;
+    center = [width/2, windowHeight/2];
+    num = width*0.1;
 
-    resizeCanvas(width-5, windowHeight-5);
-    
-    
     for(var i = 0; i < num; i++){
-        rects[i] = new particle();
+        dots[i] = new particle();
     }
-}
-
-function drawDot() {
-    blendMode(MULTIPLY);
-
-    var x = 0;
-    if (mouseX-windowWidth/4 < 0)
-        x = map(mouseX, 0, windowWidth/4, 0, -8);
-    else if (mouseX-windowWidth*3/4 < 0)
-        x = map(mouseX, windowWidth/4, windowWidth*3/4, -8, 8);
-    else
-        x = map(mouseX, windowWidth*3/4, windowWidth, 8, 0);
-
-    var y = 0;
-    if (mouseY-windowHeight/4 < 0)
-        y = map(mouseY, 0, windowHeight/4, 0, -8);
-    else if (mouseY-windowHeight*3/4 < 0)
-        y = map(mouseY, windowHeight/4, windowHeight*3/4, -8, 8);
-    else
-        y = map(mouseY, windowHeight*3/4, windowHeight, 8, 0);
 
 
-    rectMode(CENTER);
-    noStroke();
-    
 }
 
 function particle() {
-    this.pos = createVector(random(0, width), random(0, windowHeight));
-    
-    var direction = createVector(1, 1);
+    this.angle = random(-45.0, 45.0);
+    this.radius = random(0, R);
+    this.alpha = map(this.radius, 0, R, 0.5, 0.3);
+    this.pos = createVector(center[0]+this.radius*cos(this.angle), center[1]+this.radius*sin(this.angle));
+    var counter = 0.0;
+
     this.update = function() {
 
-        var speed = createVector(random(0, 0.6), random(0, 0.6));
-        var trans = createVector(0, 0);
-        trans.x = speed.x * direction.x;
-        trans.y = speed.y * direction.y;
 
-        this.pos.add(trans);
-
-        var a = random(50, 80);
-        var r = map(a, 50, 80, 3, 1);
-
-        rect(this.pos.x, this.pos.y, r, r);
-        fill(232, 97, 29, a);
-
-        if (this.pos.x > width-3) {
-            fill(48, 48, 48, a);
-            direction.x = -5;
+        let theta = noise(this.radius * 0.04, this.angle * 0.04, counter);
+        this.radius += 5.0 * cos(theta/10*TWO_PI);
+        if (this.radius > R) {
+            this.radius = cos(theta*TWO_PI);
         }
-        if (this.pos.x < 3)
-            direction.x = 1;
-        if (this.pos.y > windowHeight-3) {
-            fill(48, 48, 48, a);
-            direction.y = -5;
-        }
-        if (this.pos.y < 3)
-            direction.y = 1;
+
+        this.angle += 0.01;
+        this.pos.x = center[0]+this.radius*cos(this.angle);
+        this.pos.y = center[1]+this.radius*sin(this.angle);
+
+        counter += 8;
+
+        colorMode(HSB, 360, 100, 100, 1);
+        
+        var s = abs(this.pos.x-mouseX) + abs(this.pos.y - mouseY);
+        var hue = map(s, 0, 2*R, 200, 240);
+        fill(hue, 120, 84, this.alpha);
+
+        noStroke();
+        var dist = sqrt((this.pos.x-mouseX) * (this.pos.x-mouseX) + (this.pos.y - mouseY) * (this.pos.y - mouseY));
+        s = map(dist, 0, 2*R, 5, 10);
+        ellipse(this.pos.x, this.pos.y, s, s);
+
 
     }
 }
