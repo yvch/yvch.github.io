@@ -75,7 +75,7 @@ function particle() {
         colorMode(HSB, 360, 100, 100, 1);
         
         var s = abs(this.pos.x-mouseX) + abs(this.pos.y - mouseY);
-        var hue = map(s, 0, 2*R, 200, 240);
+        var hue = map(s, 0, 2*R, 20, 24);
         fill(hue, 120, 84, this.alpha);
 
         noStroke();

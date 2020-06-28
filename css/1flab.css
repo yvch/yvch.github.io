@@ -39,7 +39,7 @@ html {
 #header,
 #content,
 footer {
-  width: 100vw;
+  width: calc(100vw - 16px);
   max-width: 1200px;
   margin: 0px auto;
 }
@@ -131,6 +131,8 @@ footer {
 .articleItem:hover a {
   display: inline !important;
 }
-.node:hover {
-  color: #fff;
+@media $media {
+  .logo {
+    display: none;
+  }
 }

@@ -28,7 +28,7 @@ h2 {
 	font-size: 1.4em;
 	margin: 40px 10px 20px 0;
 	padding-left: 9px;
-	border-left: 4px solid #3853CB;
+	border-left: 4px solid #E8611D;
 	font-weight: 700;
 	line-height: 1.4;
 }
@@ -87,12 +87,12 @@ p {
 }
 
 a {
-	color: #3853CB;
+	color: #E8611D;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #3853CB;
+	color: #E8611D;
 	text-decoration: underline;
 }
 a:focus {
@@ -166,7 +166,7 @@ pre {
   font-family: Courier, sans-serif;
 }
 code {
-  color: #3853CB;
+  color: #E8611D;
 	background-color: #FEFCFA;
 	border-radius: 4px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -175,7 +175,7 @@ code {
 }
 
 p > code {
-	color: #3853CB;
+	color: #E8611D;
 	background-color: #FEFCFA;
 	font-size: .95em;
   border-radius: 3px;

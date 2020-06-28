@@ -19,10 +19,8 @@
 }
 
 .recent-post-item {
-	/* display: inline-flex; */
 	flex-grow: 1;
 	max-width: 320px;
-	/* height: 200px; */
 	margin-right: 32px;
 	border: 1px #e5e5e5 solid;
 	padding: 16px;
