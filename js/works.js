@@ -13,7 +13,7 @@ const svg = d3.select('svg#floatLayer')
  
 const graph = {
     nodes: [
-      { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0' },
+    { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0' },
     { id: 2, name: '拖延症的网站',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
     { id: 3, name: '琴怀', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
     { id: 4, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
