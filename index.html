@@ -22,6 +22,8 @@
   <div id="container">
 
     
+
+    
       <div class="darkTheme">
             <nav id="header">
       <div class="active menu-item logo">
@@ -52,7 +54,75 @@
     </nav>
 
     <div id="content">
-      <svg id="floatLayer"/>
+      <script src="/lib/jquery-3.3.1.min.js"></script> 
+
+<script>
+
+document.onreadystatechange = function () {
+    if(document.readyState == "complete"){
+        $(".loading").fadeOut();
+    }
+}
+</script>
+
+
+
+
+<style>
+.loading{
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loading span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0,0.9);
+    animation: load 1.04s ease infinite;
+}
+@keyframes load{
+    0%,100%{
+        background: rgba(0, 0, 0, 0.9);
+    }
+    50%{
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+.loading span:nth-child(2){
+    animation-delay:0.1s;
+}
+.loading span:nth-child(3){
+    animation-delay:0.2s;
+}
+.loading span:nth-child(4){
+    animation-delay:0.3s;
+}
+.loading span:nth-child(5){
+    animation-delay:0.5s;
+}
+.loading span:nth-child(6){
+    animation-delay:0.6s;
+}
+</style>
+
+
+<div id="blurLayer">
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+<svg id="floatLayer"/>
 <div id="dynamicBG"></div>
 
 

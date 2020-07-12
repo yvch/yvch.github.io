@@ -13,31 +13,29 @@ const svg = d3.select('svg#floatLayer')
  
 const graph = {
     nodes: [
-    { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0' },
-    { id: 2, name: '拖延症的网站',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 3, name: '琴怀', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 4, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 5, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0' },
-    { id: 6, name: 'test2',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 7, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 8, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 9, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0' },
-    { id: 10, name: 'test2',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 11, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  },
-    { id: 12, name: 'testtesttexttest',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'64'  }
+    { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0', x:'0' },
+    { id: 2, name: '个人网站搭建过程全记录',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-7.2rem'  },
+    { id: 3, name: '做中学！交互设计入门的正确姿势', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-10rem'  },
+    // { id: 4, name: '这个是测试标题',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-6rem'  },
+    // { id: 5, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0', x:'0' },
+    // { id: 6, name: '写满一整页要花多久',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-8rem'  },
+    // { id: 7, name: '这是个测试标题',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-6rem'  },
+    // { id: 8, name: '广告位',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-3rem'  },
+    // { id: 9, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0' , x:'0'},
+    // { id: 10, name: '不同字长测样式中',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-7.2rem'  },
+    // { id: 11, name: '测试一共七个字',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-6rem'  },
   ],
   links: [
       { source: 1, target: 2 },
       { source: 1, target: 3 },
-      { source: 1, target: 4 },
-      { source: 1, target: 5 },
-      { source: 1, target: 6 },
-      { source: 1, target: 7 },
-      { source: 1, target: 8 },
-      { source: 1, target: 9 },
-      { source: 1, target: 10 },
-      { source: 1, target: 11 },
-      { source: 1, target: 12 }
+      // { source: 1, target: 4 },
+      // { source: 1, target: 5 },
+      // { source: 1, target: 6 },
+      // { source: 1, target: 7 },
+      // { source: 1, target: 8 },
+      // { source: 1, target: 9 },
+      // { source: 1, target: 10 },
+      // { source: 1, target: 11 }
 
   ]
 }
@@ -46,7 +44,7 @@ const graph = {
 
 
 const simulation = d3.forceSimulation() 
-  .force('charge', d3.forceManyBody().strength(-width*5).distanceMin(150).distanceMax(450)) 
+  .force('charge', d3.forceManyBody().strength(-(width+height)*5).distanceMin(200).distanceMax(450)) 
   .force('link', d3.forceLink().id(d => d.id)) 
   .force('center', d3.forceCenter(document.body.clientWidth / 2, document.body.clientHeight / 2 -60))
 
@@ -84,23 +82,22 @@ node.on('mouseover', function() {
       .select("text")
       .transition()
       .duration(300)
-      .attr('opacity', '0.5')
       .style('font-size', '1.2rem')
       
   })
 
 node.append('rect')
   .style('width', d => d.lenght)
-  .style('height', '16')
-  .style('fill', '#2A14D9')
-  .attr('y', -8)
+  .style('height', '0.8rem')
+  .style('fill', '#EBDF00')
+  .attr('y', -12)
+  .attr('x', d => d.x)
   .attr('opacity', '1')
 
 
 node.append('text')
   .style('font-size', '1.2rem')
-  .attr('fill', '#fff')
-  .attr('opacity', '0.5')
+  .attr('fill', '#000000')
   .attr('text-anchor', 'middle')
   .text(d => d.name)
 
@@ -156,8 +153,7 @@ simulation.force('link').links(links)
 window.onresize = function() {
   width = document.getElementById('content').clientWidth;
   height = document.getElementById('content').clientHeight;
-  console.log("5");
-  simulation.force('charge', d3.forceManyBody().strength(-width*5).distanceMin(150).distanceMax(450)) 
+  simulation.force('charge', d3.forceManyBody().strength(-(width+height)*5).distanceMin(150).distanceMax(450)) 
             .force('center', d3.forceCenter(document.body.clientWidth / 2, document.body.clientHeight / 2 -60));
   simulation.restart();
 };

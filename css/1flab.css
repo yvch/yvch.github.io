@@ -20,12 +20,6 @@ html {
   overflow-x: hidden;
   font-family: SimHei, "微软雅黑", sans-serif;
 }
-#container .darkTheme {
-  background-color: #1a1a1a;
-}
-#container .lightTheme {
-  background-color: #fff;
-}
 #dynamicBG {
   position: absolute;
   left: 0;
@@ -33,19 +27,21 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: -100;
-  background-color: #000;
+  background-color: #ececec;
   overflow-y: hidden;
 }
 #header,
 #content,
 footer {
-  width: calc(100vw - 16px);
+  width: calc(100vw - 1rem);
   max-width: 1200px;
   margin: 0px auto;
 }
 .darkTheme #header {
   position: absolute;
+  z-index: 10;
   left: 50%;
+  padding: 24px 0px 0px 0px;
   transform: translate(-50%, 0);
 }
 .darkTheme footer {
@@ -54,11 +50,8 @@ footer {
   left: 50%;
   transform: translate(-50%, 0);
 }
-.darkTheme #header {
-  padding: 24px 0px 0px 0px;
-}
 .lightTheme #header {
-  padding: 24px 0px;
+  padding: 8px 0px;
   border-bottom: 1px #999 solid;
 }
 .menu-item {
@@ -68,26 +61,13 @@ footer {
 .menu {
   float: right;
 }
-.lightTheme .menu-item {
-  border: 1px #fff solid;
-}
-.darkTheme .menu-item a {
-  color: #aaa;
-  text-decoration: none !important;
-  font-size: 1rem;
-}
-.lightTheme .menu-item a {
+.menu-item a {
   color: #999;
   text-decoration: none !important;
   font-size: 1rem;
 }
-.darkTheme .menu-item a:hover,
-.darkTheme .active a {
-  color: #fff;
-  transition: all 0.3s ease-in;
-}
-.lightTheme .menu-item a:hover,
-.lightTheme .active a {
+.menu-item a:hover,
+.active a {
   color: #000;
   transition: all 0.3s ease-in;
 }
@@ -99,7 +79,15 @@ footer {
   text-align: right;
 }
 .lightTheme footer {
-  border-top: 1px solid #a3a3a3;
+  display: none;
+}
+#blurLayer {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh);
+  left: 0;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: saturate(180%) blur(32px);
 }
 #floatLayer {
   position: absolute;
@@ -112,27 +100,11 @@ footer {
   text-decoration: underline;
   font-size: 48px;
 }
-.articleItem {
-  display: inline-block;
-  opacity: 50%;
-  border-radius: 24px;
-  padding: 12px;
-  filter: blur(4px);
-  transition: all 0.3s ease-in;
-}
-.articleItem:hover {
-  opacity: 100%;
-  font-size: 1.2rem;
-  display: inline-block;
-  border-radius: 4px;
-  filter: blur(0px);
-  transition: all 0.1s ease-in;
-}
-.articleItem:hover a {
-  display: inline !important;
-}
-@media $media {
+@media screen and (max-width: 425px) {
   .logo {
     display: none;
+  }
+  :root {
+    font-size: 12px;
   }
 }

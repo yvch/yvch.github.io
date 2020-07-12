@@ -1,18 +1,10 @@
 #recent-posts {
 	margin: 16px 0px 8px 0px;
-	padding: 12px 54px; 
-}
-
-#recent-posts h2 {
-	font-weight: 700;
-	font-size: 1em;
-	line-height: 1;
-	margin: 10px 0px 5px 0px;
-	border-left: none !important;
+	padding: 12px 32px; 
 }
 
 #recent-posts ul {
-	padding: 12px;
+	padding: 0px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
