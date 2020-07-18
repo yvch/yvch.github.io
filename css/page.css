@@ -3,8 +3,9 @@
 }
 
 body {
-  	color: #1a1a1a;
+  	color: #000000;
   	background: #fff;
+  	line-height: 1.8;
 	font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
 }
 
@@ -85,12 +86,12 @@ p {
 }
 
 a {
-	color: #899EFF;
+	color: #3853CB;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #899EFF;
+	color: #3853CB;
 	text-decoration: underline;
 }
 a:focus {
@@ -164,7 +165,7 @@ pre {
   font-family: Courier, sans-serif;
 }
 code {
-  color: #899EFF;
+  color: #3853CB;
 	background-color: #FEFCFA;
 	border-radius: 4px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -173,7 +174,7 @@ code {
 }
 
 p > code {
-	color: #899EFF;
+	color: #3853CB;
 	background-color: #FEFCFA;
 	font-size: .95em;
   border-radius: 3px;
@@ -196,8 +197,8 @@ figure img {
 }
 
 hr {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	border: 0;
 	border-top: 1px solid #eee;
 }

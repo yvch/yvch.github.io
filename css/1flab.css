@@ -29,6 +29,7 @@ html {
   z-index: -100;
   background-color: #ececec;
   overflow-y: hidden;
+  filter: saturate(180%) blur(32px);
 }
 #header,
 #content,
@@ -53,6 +54,7 @@ footer {
 .lightTheme #header {
   padding: 8px 0px;
   border-bottom: 1px #999 solid;
+  backdrop-filter: saturate(180%) blur(32px);
 }
 .menu-item {
   padding: 6px 16px;
@@ -87,7 +89,6 @@ footer {
   height: calc(100vh);
   left: 0;
   background: rgba(255,255,255,0.5);
-  backdrop-filter: saturate(180%) blur(32px);
 }
 #floatLayer {
   position: absolute;
@@ -101,9 +102,6 @@ footer {
   font-size: 48px;
 }
 @media screen and (max-width: 425px) {
-  .logo {
-    display: none;
-  }
   :root {
     font-size: 12px;
   }

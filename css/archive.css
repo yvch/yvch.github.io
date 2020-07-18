@@ -20,8 +20,13 @@
 }
 
 .archive-item a:hover {
-    color: #899EFF !important;
+    color: #3853CB !important;
     text-decoration: none !important;
 }
 
+/*
+<div class="tags">
+  <%- list_tags({depth: 1}) %>
+</div>
+*/
 

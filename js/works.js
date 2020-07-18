@@ -1,11 +1,3 @@
-var articleList = [["个人网站设计开发记录","/ck8wsxu3w0001l5wj9v67n4mc"], 
-                    ["hello2","/ck8wsxu3w0001l5wj9v67n4mc"],
-                    ["网站建成记录","/ck8wsxu3w0001l5wj9v67n4mc"], 
-                    ["hello2","/ck8wsxu3w0001l5wj9v67n4mc"],
-                  ];
-var golden_ratio = 0.618033988749895;
-
-
 var width = document.getElementById('content').clientWidth;
 var height = document.getElementById('content').clientHeight;
 
@@ -15,7 +7,7 @@ const graph = {
     nodes: [
     { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0', x:'0' },
     { id: 2, name: '个人网站搭建过程全记录',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-7.2rem'  },
-    { id: 3, name: '做中学！交互设计入门的正确姿势', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-10rem'  },
+    { id: 3, name: '琴怀：交互小白探索古琴传承课题', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-10rem'  },
     // { id: 4, name: '这个是测试标题',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-6rem'  },
     // { id: 5, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0', x:'0' },
     // { id: 6, name: '写满一整页要花多久',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-8rem'  },
@@ -69,12 +61,20 @@ const node = svg.selectAll('node')
 
 node.on('mouseover', function() {
     d3.select(this)
-          .call(d3.zoom().scaleBy, 6)
       .select("text")
       .transition()
       .duration(300)
       .attr('opacity', '1.0')
       .style('font-size', '1.5rem')
+
+    d3.select(this)
+      .select("rect")
+      .transition()
+      .duration(300)
+      .style('width', '8rem')
+      .style('height', '1.2rem')
+
+
 
   })
   .on('mouseout', function() {
@@ -83,6 +83,14 @@ node.on('mouseover', function() {
       .transition()
       .duration(300)
       .style('font-size', '1.2rem')
+
+
+    d3.select(this)
+      .select("rect")
+      .transition()
+      .duration(300)
+      .style('width', d => d.lenght)
+      .style('height', '0.8rem')
       
   })
 
