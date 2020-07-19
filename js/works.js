@@ -7,7 +7,7 @@ const graph = {
     nodes: [
     { id: 1, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc', lenght:'0', x:'0' },
     { id: 2, name: '个人网站搭建过程全记录',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-7.2rem'  },
-    { id: 3, name: '琴怀：交互小白探索古琴传承课题', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-10rem'  },
+    { id: 3, name: '交互设计：课堂理论+实践篇', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-10rem'  },
     // { id: 4, name: '这个是测试标题',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-6rem'  },
     // { id: 5, name: '', url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'0', x:'0' },
     // { id: 6, name: '写满一整页要花多久',url: '/ck8wsxu3w0001l5wj9v67n4mc',lenght:'3rem', x:'-8rem'  },
