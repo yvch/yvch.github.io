@@ -35,6 +35,10 @@
 	color: #999999;
 }
 
+.hide {
+	transform: translateY(-100%);
+}
+
 @media screen and (max-width: 768px) {
 	.recent-post-item {
 		max-width: calc(50% - 32px);
