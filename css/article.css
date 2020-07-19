@@ -1,5 +1,6 @@
 #recent-posts {
-	margin: 16px 0px 8px 0px;
+	border-top: 1px #1a1a1a solid;
+	margin: 120px 0px 8px 0px;
 	padding: 12px 32px; 
 }
 
@@ -8,12 +9,16 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	/* justify-content: space-around; */
+	/* align-content: flex-start; */
 }
 
 .recent-post-item {
 	flex-grow: 1;
-	max-width: 320px;
-	margin-right: 32px;
+	flex-shrink: 1;
+	flex-basis: 320px;
+	max-width: calc(33% - 32px);
+	margin: 16px;
 	border: 1px #e5e5e5 solid;
 	padding: 16px;
 	
@@ -28,4 +33,16 @@
 .recent-post-item p {
 	font-size: 0.8rem;
 	color: #999999;
+}
+
+@media screen and (max-width: 768px) {
+	.recent-post-item {
+		max-width: calc(50% - 32px);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.recent-post-item {
+		max-width: calc(100% - 32px);
+	}
 }

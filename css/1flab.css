@@ -52,13 +52,14 @@ footer {
   transform: translate(-50%, 0);
 }
 .lightTheme #header {
-  padding: 8px 0px;
+  padding: 24px 0px 8px 0px;
   border-bottom: 1px #999 solid;
   backdrop-filter: saturate(180%) blur(32px);
 }
 .menu-item {
   padding: 6px 16px;
   float: left;
+  line-height: 1;
 }
 .menu {
   float: right;
