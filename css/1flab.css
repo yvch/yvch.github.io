@@ -54,8 +54,6 @@ footer {
 .lightTheme #header {
   padding: 24px 0px 8px 0px;
   border-bottom: 1px #999 solid;
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: saturate(180%) blur(32px);
 }
 .menu-item {
   padding: 6px 16px;

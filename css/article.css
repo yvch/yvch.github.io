@@ -35,9 +35,9 @@
 	color: #999999;
 }
 
-.hide {
+/* .hide {
 	transform: translateY(-100%);
-}
+} */
 
 @media screen and (max-width: 768px) {
 	.recent-post-item {
