@@ -1,0 +1,75 @@
+#recents {
+	border-top: 1px #000000 solid;
+    max-width: 960px;
+    margin: 120px auto;
+}
+
+#recent-posts h3 {
+	margin-left: 16px;
+	margin-top: 64px;
+}
+
+#recent-posts ul {
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* justify-content: space-around; */
+	/* align-content: flex-start; */
+}
+
+.recent-post-item {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 320px;
+	max-width: calc(50% - 32px);
+	margin: 16px;
+	border: 1px #e5e5e5 solid;
+	padding: 16px;
+	/* border-radius: 32px; */
+}
+
+.recent-post-item:hover {
+	border: none;
+    border-radius: 8px;
+    background: #3A00CF;
+    box-shadow: inset 24px 24px 48px #3100b0, 
+                inset -24px -24px 48px #4300ee;
+
+	transition: all .3s ease;
+}
+
+
+.recent-post-item p {
+	font-size: 0.8rem;
+	margin-top: 1rem;
+	color: #999999;
+}
+
+.recent-post-item a {
+	color: #000000;
+}
+
+.recent-post-item:hover a {
+	font-weight: 700;
+	text-decoration: none !important;
+	color: #ffffff;
+}
+
+.recent-post-item:hover p {
+	color: #c9c9c9;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.recent-post-item {
+		max-width: calc(50% - 32px);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.recent-post-item {
+		max-width: calc(100% - 32px);
+	}
+}

@@ -1,0 +1,54 @@
+.archive-item {
+    padding: 32px; 
+    margin: 0 auto;
+    border-bottom: 1px solid #eeeeee;
+    /* border-top: 1px solid #eeeeee; */
+    /* border-bottom: 1px solid #e5e5e5; */
+}
+
+.list {
+    margin: 64px auto;
+    max-width: 960px;
+}
+
+.list h1 {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.tag-item {
+    margin-bottom: 120px;
+}
+
+.archive-item:hover {
+    border-radius: 8px;
+    background: #3A00CF;
+    box-shadow: inset 24px 24px 48px #3100b0, 
+                inset -24px -24px 48px #4300ee;
+    transition: all .3s ease;
+}
+
+.archive-item time {
+    float: right;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+}
+
+.archive-item a {
+    font-size: 1.4rem;
+    color: #000000;
+    margin-left: 24px;
+}
+
+.archive-item:hover a, .archive-item:hover span {
+    color: #ffffff !important;
+    font-weight: 700; 
+    text-decoration: none !important;
+}
+
+/*
+<div class="tags">
+  <%- list_tags({depth: 1}) %>
+</div>
+*/
+

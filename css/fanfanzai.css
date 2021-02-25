@@ -1,0 +1,142 @@
+body::-webkit-scrollbar {
+  width: 0;
+}
+html::-webkit-scrollbar {
+  width: 0;
+}
+@font-face {
+  font-family: SourceHanSansSC;
+  src: url("/font/SourceHanSansSC-Regular.otf");
+}
+body,
+margin 0,
+height 100%,
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  overflow-x: hidden;
+  font-family: 'SourceHanSansSC', SimHei, "微软雅黑", sans-serif;
+}
+#dynamicBG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-color: #ececec;
+  overflow-y: hidden;
+  filter: saturate(180%) blur(2rem);
+}
+#header,
+#content,
+footer {
+  width: calc(100vw - 10rem);
+  max-width: 960px;
+  margin: 0px auto;
+}
+#header {
+  padding: 48px 0px 24px 0px;
+  border-bottom: 1px #eee solid;
+}
+.menu-item {
+  padding: 6px 0px;
+  float: left;
+  line-height: 1;
+}
+.menu {
+  float: right;
+}
+.menu-item a {
+  font-size: 1rem;
+  padding: 0 0.5rem 0 1.5rem;
+  color: #999;
+  text-decoration: none !important;
+}
+.menu-item a:hover,
+.active a {
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+.logo span {
+  background: url("/images/logo.png") no-repeat 0 center;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  float: left;
+}
+#header .logo span {
+  margin-top: -2px;
+}
+footer {
+  margin-top: 24px;
+  padding: 24px 16px;
+  font-size: 1rem;
+  color: #a3a3a3;
+  text-align: right;
+}
+#blurLayer {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh);
+  left: 0;
+  background: rgba(255,255,255,0.5);
+  z-index: 0;
+}
+#contentLayer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+#contentLayer .button {
+  position: relative;
+  float: left;
+}
+#contentLayer .button>a {
+  display: block;
+  float: left;
+  padding: 8px 48px;
+  margin: 4px 32px 16px 4px;
+  border-radius: 4px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(230,230,230,0.3));
+  box-shadow: 2px 2px 4px rgba(230,230,230,0.3), inset 2px 2px 4px rgba(255,255,255,0.1);
+  color: #666;
+  text-decoration: none;
+}
+#contentLayer .button>a:hover {
+  background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(230,230,230,0.6));
+  color: #000;
+}
+#contentLayer p {
+  margin: 0;
+}
+#contentLayer span {
+  margin-right: 8px;
+}
+#textLayer p {
+  font-size: 32px;
+  margin: 16px 0;
+  color: #000;
+}
+@media screen and (max-width: 425px) {
+  :root {
+    font-size: 14px;
+  }
+  #header,
+  #content,
+  footer {
+    width: calc(100vw - 1rem);
+  }
+  .logo {
+    display: none;
+  }
+}
