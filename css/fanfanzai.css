@@ -96,6 +96,7 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  min-width: 269px;
 }
 #contentLayer .button {
   position: relative;
