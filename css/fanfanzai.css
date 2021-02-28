@@ -13,7 +13,7 @@ margin 0,
 height 100%,
 html {
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 15px;
   height: 100%;
 }
 *,
@@ -32,17 +32,17 @@ html {
   z-index: -100;
   background-color: #ececec;
   overflow-y: hidden;
-  filter: saturate(180%) blur(2rem);
+  filter: saturate(180%) blur(32px);
 }
 #header,
 #content,
 footer {
-  width: calc(100vw - 10rem);
+  width: 80%;
   max-width: 960px;
   margin: 0px auto;
 }
 #header {
-  padding: 48px 0px 24px 0px;
+  padding: 3em 0px 1.5em 0px;
   border-bottom: 1px #eee solid;
 }
 .menu-item {
@@ -54,10 +54,13 @@ footer {
   float: right;
 }
 .menu-item a {
-  font-size: 1rem;
-  padding: 0 0.5rem 0 1.5rem;
+  font-size: 1em;
+  padding: 0 0.5em 0 1.5em;
   color: #999;
   text-decoration: none !important;
+}
+.logo a {
+  padding-left: 0.5em;
 }
 .menu-item a:hover,
 .active a {
@@ -67,26 +70,20 @@ footer {
 .logo span {
   background: url("/images/logo.png") no-repeat 0 center;
   background-size: 100%;
-  width: 20px;
-  height: 20px;
+  width: 1.5em;
+  height: 1.5em;
   position: relative;
   float: left;
 }
 #header .logo span {
-  margin-top: -2px;
-}
-footer {
-  margin-top: 24px;
-  padding: 24px 16px;
-  font-size: 1rem;
-  color: #a3a3a3;
-  text-align: right;
+  margin-top: -0.4em;
 }
 #blurLayer {
   position: absolute;
   width: 100%;
   height: calc(100vh);
   left: 0;
+  top: 0;
   background: rgba(255,255,255,0.5);
   z-index: 0;
 }
@@ -96,7 +93,7 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  min-width: 269px;
+  min-width: 8em;
 }
 #contentLayer .button {
   position: relative;
@@ -105,13 +102,14 @@ footer {
 #contentLayer .button>a {
   display: block;
   float: left;
-  padding: 8px 48px;
-  margin: 4px 32px 16px 4px;
-  border-radius: 4px;
+  padding: 0.5em 3em;
+  margin: 0.25em 2.2em 1em 0.25em;
+  border-radius: 8px;
   background: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(230,230,230,0.3));
   box-shadow: 2px 2px 4px rgba(230,230,230,0.3), inset 2px 2px 4px rgba(255,255,255,0.1);
-  color: #666;
+  color: #454545;
   text-decoration: none;
+  white-space: nowrap;
 }
 #contentLayer .button>a:hover {
   background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(230,230,230,0.6));
@@ -121,23 +119,18 @@ footer {
   margin: 0;
 }
 #contentLayer span {
-  margin-right: 8px;
+  margin-right: 0.5em;
 }
 #textLayer p {
-  font-size: 32px;
-  margin: 16px 0;
+  font-size: 2em;
+  margin: 1em 0;
   color: #000;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   :root {
-    font-size: 14px;
+    font-size: 12px;
   }
-  #header,
-  #content,
-  footer {
-    width: calc(100vw - 1rem);
-  }
-  .logo {
+  .menu a {
     display: none;
   }
 }

@@ -1,7 +1,10 @@
+html {
+	font-size: 15px;
+}
+
 #post, #page {
-	padding: 0px 16px; 
-	max-width: 960px;
-	margin: 0px auto;
+	max-width: 690px;
+	margin: 0 auto;
 }
 
 body {
@@ -67,18 +70,17 @@ h6 {
 }
 
 img {
-	width: 100%;
-	max-width: 480px;
+	width: 80%;
 	border-radius: 8px;
 	display: block;
-	margin: 0 auto 12px auto;
+	margin: 1em auto;
 	height: auto;
 	text-align: center;
 }
 
 dl, ol, ul {
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
 	padding-inline-start: 5%;
 	line-height: 1.8;
 	padding-left: 20px;
@@ -113,7 +115,7 @@ blockquote {
 	line-height: 1.8;
 	text-indent: 0;
 	border: none;
-  color: #999999;
+  	color: #999999;
 }
 
 blockquote:before {
@@ -183,9 +185,9 @@ p > code {
 	color: #3A00CF;
 	background-color: #FEFCFA;
 	font-size: .95em;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  	border-radius: 3px;
+  	-moz-border-radius: 3px;
+  	-webkit-border-radius: 3px;
 }
 
 figure {
@@ -209,16 +211,22 @@ hr {
 	border-top: 1px solid #eee;
 }
 
-ol p, ul p {
-	margin-bottom: 0px;
-}
-
-li {
+ol li {
 	margin-bottom: 0.75em;
 	margin-top: 0.75em;
 	list-style-type:decimal;
 	list-style-position:inside;
+}
 
+ul li {
+	margin-bottom: 0.75em;
+	margin-top: 0.75em;
+	list-style-type:disc;
+	list-style-position:inside;
+}
+
+li p {
+	display: inline;
 }
 
 li::marker {
@@ -227,7 +235,6 @@ li::marker {
 
 ul, ol {
     padding: 0;
-    padding-left: 24px;
     margin: 0;
 }
 
@@ -302,4 +309,11 @@ time {
 .toc-link {
 	color: #333333;
 }
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 

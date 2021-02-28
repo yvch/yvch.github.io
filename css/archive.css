@@ -1,23 +1,25 @@
+html {
+	font-size: 15px;
+}
+
 .archive-item {
-    padding: 32px; 
+    padding: 2em; 
     margin: 0 auto;
     border-bottom: 1px solid #eeeeee;
-    /* border-top: 1px solid #eeeeee; */
-    /* border-bottom: 1px solid #e5e5e5; */
 }
 
 .list {
-    margin: 64px auto;
+    margin: 1em auto;
     max-width: 960px;
 }
 
 .list h1 {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 0.5em;
 }
 
 .tag-item {
-    margin-bottom: 120px;
+    margin-bottom: 4em;
 }
 
 .archive-item:hover {
@@ -30,25 +32,39 @@
 
 .archive-item time {
     float: right;
-    font-size: 1rem;
-    margin-top: 0.4rem;
+    font-size: 1em;
+    margin-top: 0.4em;
 }
 
 .archive-item a {
-    font-size: 1.4rem;
+    font-size: 1.2em;
     color: #000000;
-    margin-left: 24px;
+    margin-left: 1.5em;
 }
 
 .archive-item:hover a, .archive-item:hover span {
     color: #ffffff !important;
-    font-weight: 700; 
+    /* font-weight: 700;  */
     text-decoration: none !important;
 }
 
-/*
-<div class="tags">
-  <%- list_tags({depth: 1}) %>
-</div>
-*/
+@media screen and (max-width: 680px) {
+    .archive-item time {
+        float: none;
+    }
 
+    .archive-item a {
+        display: block;
+        margin-left: 0;
+    }
+
+    .archive-item {
+        padding: 1em; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
