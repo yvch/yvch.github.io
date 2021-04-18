@@ -99,21 +99,35 @@ footer {
   position: relative;
   float: left;
 }
-#contentLayer .button>a {
+#contentLayer .primary {
   display: block;
   float: left;
   padding: 0.5em 3em;
   margin: 0.25em 2.2em 1em 0.25em;
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(230,230,230,0.3));
-  box-shadow: 2px 2px 4px rgba(230,230,230,0.3), inset 2px 2px 4px rgba(255,255,255,0.1);
-  color: #454545;
+  background: linear-gradient(145deg, rgba(40,40,40,0.8), rgba(32,32,32,0.6));
+  box-shadow: 2px 2px 4px rgba(29,29,29,0.3), inset 2px 2px 4px rgba(43,43,43,0.1);
+  color: #fff;
   text-decoration: none;
   white-space: nowrap;
 }
-#contentLayer .button>a:hover {
-  background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(230,230,230,0.6));
-  color: #000;
+#contentLayer .primary:hover {
+  background: linear-gradient(145deg, #282828, #202020);
+}
+#contentLayer .secondary {
+  display: block;
+  float: left;
+  padding: 0.5em 3em;
+  margin: 0.25em 2.2em 1em 0.25em;
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(244,244,244,0.1));
+  box-shadow: 2px 2px 4px rgba(244,244,244,0.3), inset 2px 2px 4px rgba(255,255,255,0.1);
+  color: #242424;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#contentLayer .secondary:hover {
+  background: linear-gradient(145deg, #fff, rgba(244,244,244,0.8));
 }
 #contentLayer p {
   margin: 0;
@@ -124,7 +138,7 @@ footer {
 #textLayer p {
   font-size: 2em;
   margin: 1em 0;
-  color: #000;
+  color: #3c3c3c;
 }
 @media screen and (max-width: 480px) {
   :root {

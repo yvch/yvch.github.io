@@ -55,7 +55,7 @@ function particle() {
     this.alpha = map(this.radius, 0, R, 0.8, 0.5);
     this.pos = createVector(center[0]+this.radius*cos(this.angle), center[1]+this.radius*sin(this.angle));
     this.size = random(40, R/6);
-    this.color = random(200, 240);
+    this.color = random(0, 40);
     var counter = 0.0;
 
     this.update = function() {
@@ -66,7 +66,6 @@ function particle() {
         if (this.radius > R*2/3) {
             this.radius = cos(theta*TWO_PI);
             this.size = random(40, width/6);
-            this.color = random(200, 240);
         }
 
         this.angle += 0.01;
@@ -80,15 +79,15 @@ function particle() {
         
         // var s = abs(this.pos.x-mouseX) + abs(this.pos.y - mouseY);
         // var hue = map(s, 0, 2*R, 20, 24);
-        this.color = (sin(counter)+1)*40+180;
-        fill(this.color, 96, 84, this.alpha);
+        this.color = (sin(counter)+1)*40+185;
+        fill(this.color, 48, 96, this.alpha);
         noStroke();
 
         // 不规则形状
         blob(this.pos.x, this.pos.y, this.size, this.angle+this.radius*0.1);
 
 
-        fill(this.color-40, 96, 84, this.alpha/2);
+        fill(this.color-40, 48, 96, this.alpha/2);
         blob(center[0]+mouseX/50, center[1]+mouseY/50, this.size, this.angle+this.radius*0.2);
 
         // var dist = sqrt((this.pos.x-mouseX) * (this.pos.x-mouseX) + (this.pos.y - mouseY) * (this.pos.y - mouseY));

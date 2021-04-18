@@ -24,7 +24,7 @@
 	flex-basis: 320px;
 	max-width: calc(50% - 32px);
 	margin: 1em;
-	border: 1px #e5e5e5 solid;
+	border: 1px #c9c9c9 solid;
 	padding: 1em;
 	list-style-type:none;
 }
@@ -32,10 +32,8 @@
 .recent-post-item:hover {
 	border: none;
     border-radius: 8px;
-    background: #3A00CF;
-    box-shadow: inset 24px 24px 48px #3100b0, 
-                inset -24px -24px 48px #4300ee;
-
+    background: linear-gradient(145deg, #272727, #202020);
+    box-shadow: 2px 2px 4px rgba(29, 29, 29, 0.3), inset 2px 2px 4px rgba(43, 43, 43, 0.1);
 	transition: all .3s ease;
 }
 

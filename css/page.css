@@ -1,5 +1,5 @@
 html {
-	font-size: 15px;
+	font-size: 16px;
 }
 
 #post, #page {
@@ -8,22 +8,24 @@ html {
 }
 
 body {
-  	color: #000000;
+  	color: #242424;
   	background: #fafafa;
-  	line-height: 1.8;
 	font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
+	line-height: 1.8;
+	font-size: 1em;
 }
 
 h1 {
 	font-size: 2.2em;
-	font-weight: 700;
-	line-height: 2.4;
+	font-weight: 400;
+	line-height: 1.45;
 	padding-top: 16px;
 	margin-bottom: 4px;
+	text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
-	line-height: 1.4em;
+	line-height: 1.45;
 	margin-top: 2.2em;
 	margin-bottom: 4px;
 }
@@ -33,15 +35,13 @@ h2 {
 	margin: 40px 10px 20px 0;
 	padding-left: 8px;
 	font-weight: 700;
-	line-height: 1.4;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: #242424;
 }
 
 h3 {
 	font-weight: 700;
 	font-size: 1.2em;
-	line-height: 1.4;
 	margin: 10px 0 5px;
 	padding-top: 10px;
 }
@@ -50,7 +50,6 @@ h4 {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 1.1em;
-	line-height: 1.4;
 	margin: 10px 0 5px;
 	padding-top: 10px
 }
@@ -70,7 +69,7 @@ h6 {
 }
 
 img {
-	width: 80%;
+	width: 100%;
 	border-radius: 8px;
 	display: block;
 	margin: 1em auto;
@@ -82,24 +81,23 @@ dl, ol, ul {
 	margin-top: 0.8em;
 	margin-bottom: 0.8em;
 	padding-inline-start: 5%;
-	line-height: 1.8;
+	line-height: 1.45;
 	padding-left: 20px;
 }
 
 p {
-	margin: 20px 0;
 	padding: 0;
 	line-height: 1.8;
 	font-size: 1em;
 }
 
 a {
-	color: #3A00CF;
+	color: #1B8DFF;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #3A00CF;
+	color: #1B8DFF;
 	text-decoration: underline;
 }
 a:focus {
@@ -125,7 +123,7 @@ blockquote:before {
   color: #E0E0E0;
 	font-size: 4em;
 	font-family: Arial, serif;
-	line-height: 1em;
+	line-height: 1.45;
 	font-weight: 700;
 	position: absolute;
 }
@@ -137,7 +135,7 @@ blockquote:after {
 	color: #E0E0E0;
 	font-size: 4em;
 	font-family: Arial, serif;
-	line-height: 1em;
+	line-height: 1.45;
 	font-weight: 700;
 	position: absolute;
 	bottom: -31px;
@@ -159,7 +157,7 @@ del {
 pre {
 	margin: 0 0 10px;
 	font-size: 13px;
-	line-height: 1.42857;
+	line-height: 1.45;
 	word-break :break -all;
 	word-wrap: break -word;
 	border-radius: 4px;
@@ -173,7 +171,7 @@ pre {
   font-family: Courier, sans-serif;
 }
 code {
-  color: #3A00CF;
+  color: #1B8DFF;
 	background-color: #FEFCFA;
 	border-radius: 4px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -182,7 +180,7 @@ code {
 }
 
 p > code {
-	color: #3A00CF;
+	color: #1B8DFF;
 	background-color: #FEFCFA;
 	font-size: .95em;
   	border-radius: 3px;
@@ -219,8 +217,8 @@ ol li {
 }
 
 ul li {
-	margin-bottom: 0.75em;
-	margin-top: 0.75em;
+	margin-bottom: 0.25em;
+	margin-top: 0.25em;
 	list-style-type:disc;
 	list-style-position:inside;
 }
@@ -279,15 +277,18 @@ a:target {
 }
 
 time {
-    font-size: 1rem;
+    font-size: 1em;
+	line-height: 2.4;
 	color: #c9c9c9;
+	padding: 1em;
+	border-top: 1px solid #c9c9c9;
 }
 
-.title {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin-bottom: 16px;
+.info {
+	padding-top: 1em;
+	text-align: center;
 }
+
 
 .toc, .toc ol {
 	line-height: 1.2;
@@ -303,11 +304,12 @@ time {
 
 .toc {
 	background: #f6f6f6;
-	padding: 16px 48px;
+	padding: 16px 32px;
+	margin: 24px 0;
 }
 
 .toc-link {
-	color: #333333;
+	color: #242424;
 }
 
 @media screen and (max-width: 480px) {
