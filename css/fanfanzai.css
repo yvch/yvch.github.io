@@ -4,13 +4,10 @@ body::-webkit-scrollbar {
 html::-webkit-scrollbar {
   width: 0;
 }
-@font-face {
-  font-family: SourceHanSansSC;
-  src: url("/font/SourceHanSansSC-Regular.otf");
+body {
+  margin: 0;
+  height: 100%;
 }
-body,
-margin 0,
-height 100%,
 html {
   box-sizing: border-box;
   font-size: 15px;
@@ -21,7 +18,7 @@ html {
 *:after {
   box-sizing: inherit;
   overflow-x: hidden;
-  font-family: 'SourceHanSansSC', SimHei, "微软雅黑", sans-serif;
+  font-family: SimHei, "微软雅黑", sans-serif;
 }
 #dynamicBG {
   position: absolute;
@@ -129,16 +126,8 @@ footer {
 #contentLayer .secondary:hover {
   background: linear-gradient(145deg, #fff, rgba(244,244,244,0.8));
 }
-#contentLayer p {
-  margin: 0;
-}
 #contentLayer span {
   margin-right: 0.5em;
-}
-#textLayer p {
-  font-size: 2em;
-  margin: 1em 0;
-  color: #3c3c3c;
 }
 @media screen and (max-width: 480px) {
   :root {

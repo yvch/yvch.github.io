@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="applicable-device" content="pc,mobile">
+  
+  <title>交互设计导图 - FanFanZai</title>
+  
+    <!-- stylesheets list from _config.yml -->
+    
+      <link rel="stylesheet" href="/css/fanfanzai.css">
+    
+  
+</head>
+
+
+<body>    
+  <div id="container">
+      
+    <nav id="header">
+      <div class="active menu-item logo">
+        <a href="/">
+          <span></span>
+          饭饭仔寻宝手记
+        </a>
+      </div>
+      
+      <div class="menu">
+              
+        
+          <div class="menu-item">
+            <a href="/">首页</a>
+          </div>
+        
+              
+        
+          <div class="menu-item">
+            <a href="/archives">作品</a>
+          </div>
+        
+              
+        
+          <div class="menu-item">
+            <a href="/about">简历</a>
+          </div>
+        
+      
+      </div>
+    </nav>
+  
+
+
+  <div id="content">
+      <link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/article.css">
+
+<article id="post">
+  <h1 class="title">交互设计导图</h1>
+  <div class="info">
+    <time datetime="2021-03-23T15:43:10.000Z">
+      2021.03.23
+    </time>
+  </div>
+
+  
+  
+<style>
+    #post {
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important
+    }
+    #mindLayer {
+        width: 100%;
+        margin-top: 4em;
+    }
+    #mapLayer {
+        width: 75%;
+        float: left;
+        background-color: #f6f6f6;
+    }
+    #textLayer {
+        width: calc(25% - 8px);
+        background-color: #eeeeee;
+        float: right;
+        height: 100px;
+        padding: 1em;
+        margin-left: 8px;
+    }
+    .selected {
+        fill: #1B8DFF;
+    }
+    .ref {
+        color:#c9c9c9;
+    }
+    .mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+	#mapLayer {
+		width: 100%;
+	}
+
+	#textLayer {
+		display: none;
+	}
+
+    .mobile {
+        display: block;
+    }
+}
+
+
+</style>
+
+<div class="mobile">建议使用PC查看</div>
+
+<div id="mindLayer">
+    <div id="mapLayer"></div>
+    <div id="textLayer"></div>
+</div>
+
+<script type="text/javascript" src="/lib/d3.min.js"></script> 
+<script type="text/javascript" src="/demo/tree.js"></script>
+
+<hr>
+<div class="ref">参考书籍</div>
+
+
+</article>
+
+
+<!-- <div id="paginator">
+  
+</div> -->
+
+
+      
+        <div id="recents">
+          
+
+
+  <div class="prev">
+    <span>上一篇</span>
+    <a href="/posts/c63dd0cb/">迟来的新年Flag！</a>
+  </div>
+
+
+        </div>
+      
+    </div>
+
+    <footer>
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv" style="visibility:hidden">访问量<span id="busuanzi_value_site_pv"></span>次</span>
+      <!-- ©2021, FanFanZai.cc -->
+    </footer>
+  </div>
+</body>
+</html>

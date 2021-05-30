@@ -92,13 +92,13 @@ p {
 }
 
 a {
-	color: #1B8DFF;
+	color: #000000;
 	text-decoration: none;
 }
 
 a:hover {
 	color: #1B8DFF;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:focus {
 	outline-offset: -2px;
@@ -280,7 +280,7 @@ time {
     font-size: 1em;
 	line-height: 2.4;
 	color: #c9c9c9;
-	padding: 1em;
+	padding: 1em 1em 0 1em;
 	border-top: 1px solid #c9c9c9;
 }
 
@@ -296,6 +296,7 @@ time {
 
 .toc li {
 	list-style-type:none;
+	overflow-y: hidden;
 }
 
 .toc-number {
