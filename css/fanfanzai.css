@@ -60,7 +60,8 @@ footer {
   padding-left: 0.5em;
 }
 .menu-item a:hover,
-.active a {
+.active a,
+a:active {
   color: #000;
   transition: all 0.3s ease-in;
 }
@@ -108,7 +109,8 @@ footer {
   text-decoration: none;
   white-space: nowrap;
 }
-#contentLayer .primary:hover {
+#contentLayer .primary:hover,
+#contentLayer .primary:active {
   background: linear-gradient(145deg, #282828, #202020);
 }
 #contentLayer .secondary {
@@ -123,11 +125,18 @@ footer {
   text-decoration: none;
   white-space: nowrap;
 }
-#contentLayer .secondary:hover {
+#contentLayer .secondary:hover,
+#contentLayer .secondary:active {
   background: linear-gradient(145deg, #fff, rgba(244,244,244,0.8));
 }
 #contentLayer span {
+  margin-top: 0.8em;
   margin-right: 0.5em;
+}
+#textLayer p {
+  font-size: 2em;
+  margin: 1em 0;
+  color: #000;
 }
 @media screen and (max-width: 480px) {
   :root {

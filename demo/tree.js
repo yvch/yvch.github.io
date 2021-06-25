@@ -1,8 +1,8 @@
 width = d3.select('div#mapLayer').node().getBoundingClientRect().width;
+if (width < 600)
+  width = 600;
 dx = 24;
 dy = width / 7;
-if (dy < 120)
-  dy = 100;
 margin = ({top: 80, right: width/5, bottom: 80, left: width/20});
 diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
 
@@ -59,8 +59,8 @@ d3.json("/demo/hci-map.json").then(data => {
         .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
         .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
 
-    d3.select('div#textLayer')
-        .style("height", height+8+'px');
+    // d3.select('div#textLayer')
+    //     .style("height", height+8+'px');
 
     // Update the nodes…
     const node = gNode.selectAll("g")
@@ -75,25 +75,25 @@ d3.json("/demo/hci-map.json").then(data => {
           
           d3.selectAll(".selected circle").attr("fill", d => d._children ? "#242424" : "#F6F6F6");
           d3.selectAll(".selected").classed("selected notchangefill", false);
-          d3.select("#textLayer h3").remove();
-          d3.select("#textLayer p").remove();
+          // d3.select("#textLayer h3").remove();
+          // d3.select("#textLayer p").remove();
 
           d3.select(this).classed("selected notchangefill", true);
           d3.select(this).select("circle").attr("fill", d => d._children ? "#1B8DFF" : "#F6F6F6");
 
           d3.selectAll("g:not(.notchangefill)").attr("fill", "#999999");
 
-          d3.json("/demo/" + d.data.name + ".json").then(data => {
-            d3.select("#textLayer").append("h3")
-                .text(data.title);
+          // d3.json("/demo/" + d.data.name + ".json").then(data => {
+          //   d3.select("#textLayer").append("h3")
+          //       .text(data.title);
 
-            d3.select("#textLayer").append("p")
-                .text(data.content);
+          //   d3.select("#textLayer").append("p")
+          //       .text(data.content);
             
-          })
-          .catch(error => {
-            // console.error(error);
-          });
+          // })
+          // .catch(error => {
+          //   // console.error(error);
+          // });
 
           update(d);
 

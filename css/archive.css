@@ -22,7 +22,7 @@ html {
     margin-bottom: 4em;
 }
 
-.archive-item:hover {
+.archive-item:hover, .archive-item:active {
     border-radius: 8px;
     background: linear-gradient(145deg, #272727, #202020);
     box-shadow: 2px 2px 4px rgba(29, 29, 29, 0.3), inset 2px 2px 4px rgba(43, 43, 43, 0.1);
